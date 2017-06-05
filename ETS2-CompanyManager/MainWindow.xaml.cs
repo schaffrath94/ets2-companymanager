@@ -24,5 +24,14 @@ namespace ETS2_CompanyManager
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                System.Diagnostics.Process.Start("http://www.ets2-companymanager.de/");
+            }
+            catch { }
+        }
     }
 }
