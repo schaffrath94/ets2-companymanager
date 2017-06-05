@@ -8,14 +8,16 @@
         Title="Login | ETS2-CompanyManager" Height="400" Width="350" ResizeMode="CanMinimize" Background="DimGray">
     <Grid>
         <Image Height="80" Margin="0,10,0,0" Width="320" HorizontalAlignment="Center" VerticalAlignment="Top" Source="Images/ETSCompanyManager.png" Stretch="UniformToFill"/>
-        <TextBlock HorizontalAlignment="Center" Margin="127,130,127,0" TextWrapping="Wrap" Text="Benutzername:" VerticalAlignment="Top" Width="90" Height="20" TextAlignment="Center"/>
-        <TextBlock HorizontalAlignment="Center" Margin="127,175,127,0" TextWrapping="Wrap" Text="Passwort:" VerticalAlignment="Top" Width="90" Height="20" TextAlignment="Center"/>
-        <TextBox HorizontalAlignment="Center" Height="20" Margin="112,150,112,0" TextWrapping="Wrap" Text="Benutzer" VerticalAlignment="Top" Width="120"/>
-        <PasswordBox HorizontalAlignment="Center" Height="20" Margin="112,195,112,0" VerticalAlignment="Top" Width="120" Password="Passwort"/>
-        <Label Content="Passwort vergessen?" HorizontalAlignment="Center" Margin="112,208,112,0" VerticalAlignment="Top" Width="120" Height="30" Panel.ZIndex="5" FontSize="10" Foreground="#FFFFC320" HorizontalContentAlignment="Center"/>
-        <Button Content="Login" HorizontalAlignment="Center" Height="20" Margin="134,240,134,0" VerticalAlignment="Top" Width="76" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
-        <Button Content="Hilfe?" Margin="0,0,25,25" VerticalAlignment="Bottom" VerticalContentAlignment="Center" Width="75" HorizontalAlignment="Right" Height="20"/>
-        <Button Content="Website" Margin="20,0,0,20" VerticalAlignment="Bottom" VerticalContentAlignment="Center" Width="75" HorizontalAlignment="Left" Height="20" Click="Button_Click"/>
+        <Label Content="Benutzername:" HorizontalAlignment="Center" Margin="0,130,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Center" Height="20" Margin="0,155,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Passwort:" HorizontalAlignment="Center" Margin="0,175,0,0" VerticalAlignment="Top"/>
+        <PasswordBox HorizontalAlignment="Center" Height="20" Margin="0,200,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="ForgotPassword" Cursor="Hand" Content="Passwort vergessen?" HorizontalAlignment="Center" Margin="0,215,0,0" VerticalAlignment="Top" Width="120" Height="30" Panel.ZIndex="5" FontSize="10" Foreground="#FFFFC320" HorizontalContentAlignment="Center" MouseLeftButtonUp="ForgotPassword_MouseLeftButtonUp"/>
+        <Button Content="Login" HorizontalAlignment="Center" Height="20" Margin="0,240,0,0" VerticalAlignment="Top" Width="76" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FlowDirection="RightToLeft"/>
+        <Button x:Name="Btn_Help" Content="Hilfe?" Margin="0,0,25,25" VerticalAlignment="Bottom" VerticalContentAlignment="Center" Width="75" HorizontalAlignment="Right" Height="20" Click="Btn_Help_Click"/>
+        <Button x:Name="Btn_Website" Content="Website" Margin="25,0,0,25" VerticalAlignment="Bottom" VerticalContentAlignment="Center" Width="75" HorizontalAlignment="Left" Height="20" Click="Btn_Website_Click"/>
+        
+
 
     </Grid>
 </Window>

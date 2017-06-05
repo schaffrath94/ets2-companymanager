@@ -20,16 +20,39 @@ namespace ETS2_CompanyManager
     /// </summary>
     public partial class MainWindow : Window
     {
+        public static string url = "http://www.ets2-companymanager.de/";
+
+
         public MainWindow()
         {
             InitializeComponent();
-        }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        }
+    
+
+        private void Btn_Website_Click(object sender, RoutedEventArgs e)
         {
             try
             {
-                System.Diagnostics.Process.Start("http://www.ets2-companymanager.de/");
+                System.Diagnostics.Process.Start(MainWindow.url); //Link Zur Homepage
+            }
+            catch { }
+        }
+
+        private void Btn_Help_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                System.Diagnostics.Process.Start(MainWindow.url + "/faq.php"); //Link zum FAQ-Bereich
+            }
+            catch { }
+        }
+
+        private void ForgotPassword_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            try
+            {
+                System.Diagnostics.Process.Start(MainWindow.url + "/forgotpassword.php"); //Passwort Vergessen?
             }
             catch { }
         }
