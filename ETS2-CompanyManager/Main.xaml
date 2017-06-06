@@ -1,0 +1,20 @@
+﻿<controls:MetroWindow x:Class="ETS2_CompanyManager.Main"
+                      xmlns:controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+                      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                      BorderBrush="{DynamicResource AccentColorBrush}"
+                      BorderThickness="1"
+                      Title="Startseite | ETS2-CompanyManager" Height="600" Width="800" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen">
+
+    <Grid>
+        <controls:MetroAnimatedSingleRowTabControl x:Name="MetroAnimatedSingleRowTabControl" VerticalAlignment="Center" Margin="10" HorizontalAlignment="Center" Width="772" controls:TabControlHelper.Underlined="SelectedTabItem" Height="549" controls:TabControlHelper.IsUnderlined="True" >
+            <TabItem Header="TabItem1">
+                <Grid Background="#FFE5E5E5">
+                    <RadioButton x:Name="radioButton" Content="RadioButton" HorizontalAlignment="Left" Margin="202,199,0,0" VerticalAlignment="Top"/>
+                </Grid>
+            </TabItem>
+        </controls:MetroAnimatedSingleRowTabControl>
+    </Grid>
+
+</controls:MetroWindow>
+

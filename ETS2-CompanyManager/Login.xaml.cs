@@ -12,18 +12,20 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using MahApps.Metro.Controls;
 
 namespace ETS2_CompanyManager
 {
     /// <summary>
-    /// Interaktionslogik für MainWindow.xaml
+    /// Interaktionslogik für Login.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Login : MetroWindow
+
     {
-        public static string url = "http://www.ets2-companymanager.de/";
+        public static string Url = "http://www.ets2-companymanager.de/";
 
 
-        public MainWindow()
+        public Login()
         {
             InitializeComponent();
 
@@ -34,7 +36,7 @@ namespace ETS2_CompanyManager
         {
             try
             {
-                System.Diagnostics.Process.Start(MainWindow.url); //Link Zur Homepage
+                System.Diagnostics.Process.Start(Login.Url); //Link Zur Homepage
             }
             catch { }
         }
@@ -43,7 +45,7 @@ namespace ETS2_CompanyManager
         {
             try
             {
-                System.Diagnostics.Process.Start(MainWindow.url + "/faq.php"); //Link zum FAQ-Bereich
+                System.Diagnostics.Process.Start(Login.Url + "/faq.php"); //Link zum FAQ-Bereich
             }
             catch { }
         }
@@ -52,9 +54,16 @@ namespace ETS2_CompanyManager
         {
             try
             {
-                System.Diagnostics.Process.Start(MainWindow.url + "/forgotpassword.php"); //Passwort Vergessen?
+                System.Diagnostics.Process.Start(Login.Url + "/forgotpassword.php"); //Passwort Vergessen?
             }
             catch { }
+        }
+
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+            Main mainWindow = new Main();
+            mainWindow.Show();
+            this.Close();
         }
     }
 }
